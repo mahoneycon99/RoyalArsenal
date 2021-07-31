@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Royal Arsenal</name>
+  <author>Bucko</author>
+  <packageId>Bucko.RoyalArsenal</packageId>
+  <supportedVersions>
+    <li>1.3</li>
+  </supportedVersions>
+  <description>V1.0\n\nExpands upon the Empire's technology, adding new and powerful equipment.</description>
+  <loadAfter>
+      <li>Ludeon.RimWorld</li>
+      <li>Ludeon.RimWorld.Royalty</li>
+  </loadAfter>
+</ModMetaData>

@@ -1,0 +1,4 @@
+D:\Steam\steamapps\common\RimWorld\Mods\RoyalArsenal\Assemblies\RoyalArsenal.dll
+D:\Steam\steamapps\common\RimWorld\Mods\RoyalArsenal\Source\RoyalArsenal\RoyalArsenal\obj\Debug\RoyalArsenal.csproj.CoreCompileInputs.cache
+D:\Steam\steamapps\common\RimWorld\Mods\RoyalArsenal\Source\RoyalArsenal\RoyalArsenal\obj\Debug\RoyalArsenal.dll
+D:\Steam\steamapps\common\RimWorld\Mods\RoyalArsenal\Source\RoyalArsenal\RoyalArsenal\obj\Debug\RoyalArsenal.csproj.AssemblyReference.cache

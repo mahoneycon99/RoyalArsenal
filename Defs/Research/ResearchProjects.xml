@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>RA_CloakingResearch</defName>
+    <label>cloaking field</label>
+    <description>Manufacture portable devices capable of bending light around a user, rendering them difficult to detect.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>ReconArmor</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>15.00</researchViewX>
+    <researchViewY>0.7</researchViewY>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>2</techprintCommonality>
+    <techprintMarketValue>4000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RA_MonoBowResearch</defName>
+    <label>experimental mono-tech</label>
+    <description>Produce an experimental ranged weapon that utilizes crude mono-weapon technology.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>Fabrication</li>
+    </prerequisites>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>15.00</researchViewX>
+    <researchViewY>5.8</researchViewY>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>2</techprintCommonality>
+    <techprintMarketValue>4000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RA_RoyalChargedShot</defName>
+    <label>royal charged munitions</label>
+    <description>Replicate the latest in Imperial pulse-charge technology. Royal charge weapons require extra gold and advanced components to craft, but they are superior to standard charge weapons in many ways.</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>ChargedShot</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>15.00</researchViewX>
+    <researchViewY>5.0</researchViewY>
+    <techprintCount>1</techprintCount>
+    <techprintCommonality>2</techprintCommonality>
+    <techprintMarketValue>3000</techprintMarketValue>
+    <heldByFactionCategoryTags>
+      <li>Empire</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>RA_RadioChaffResearch</defName>
+    <label>personal countermeasure system</label>
+    <description>Create personal countermeasure systems that spew radio-reflective chaff in a small area. Chaff prevents turrets from locking onto targets, but humanoid pawns can still shoot through it with no penalties..</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <prerequisites>
+      <li>SmokepopBelt</li>
+    </prerequisites>
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>5.6</researchViewY>
+  </ResearchProjectDef>
+</Defs>

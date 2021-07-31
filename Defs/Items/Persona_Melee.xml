@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseWeapon_Bladelink">
+    <defName>RA_MonoGreatswordBladelink</defName>
+    <label>persona mono-greatsword</label>
+    <description>A crystal-metallic longsword infused with mechanites that maintain a mono-molecular cutting edge. This weapon is a larger two-handed variant of the traditional monosword.
+\nThis weapon has an onboard persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the weapon's persona will refuse to be wielded by anyone else.</description>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+    <equippedAngleOffset>-35</equippedAngleOffset>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Items/Equipment/WeaponMelee/MonoGreatsword</texPath>
+      <color>(255,200,200)</color>
+	  <drawSize>1.3</drawSize>
+    </graphicData>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+    </equippedStatOffsets>
+    <soundInteract>Interact_BladelinkMonoSword</soundInteract>
+    <meleeHitSound>MeleeHit_BladelinkMonoSword</meleeHitSound>
+    <weaponTags>
+      <li>RA_Bladelink</li>
+    </weaponTags>
+	<weaponClasses>
+      <li>Melee</li>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>38</power>
+        <cooldownTime>1.9</cooldownTime>
+        <armorPenetration>0.9</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>38</power>
+        <cooldownTime>1.9</cooldownTime>
+        <armorPenetration>0.9</armorPenetration>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeapon_Bladelink">
+    <defName>RA_PlasmaGreatswordBladelink</defName>
+    <label>persona plasma greatsword</label>
+    <description>A metal-cored sword with a cutting edge. Plasma is wrapped around the core, held in place by an energy field. Targets are both sliced by the metal core, as well as burned or ignited by the plasma sheath. This weapon is a larger two-handed variant of the traditional plasmasword.
+\nThis weapon has an onboard persona that can bond to only a single person. The wielder and intelligent weapon can synchronize their reflexes and attack with frightening speed, accuracy, and creativity. Once bonded to a wielder, the weapon's persona will refuse to be wielded by anyone else.</description>
+    <statBases>
+      <MarketValue>4000</MarketValue>
+      <Mass>5</Mass>
+    </statBases>
+    <soundInteract>Interact_BladelinkPlasmaSword</soundInteract>
+    <meleeHitSound>MeleeHit_BladelinkPlasmaSword</meleeHitSound>
+    <equippedAngleOffset>-35</equippedAngleOffset>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Items/Equipment/WeaponMelee/PlasmaGreatsword</texPath>
+      <color>(255,200,200)</color>
+	  <drawSize>1.3</drawSize>
+    </graphicData>
+	<equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>RA_Bladelink</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>2</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>10</amount>
+            <chance>0.7</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>2</cooldownTime>
+        <extraMeleeDamages>
+          <li>
+            <def>Flame</def>
+            <amount>10</amount>
+            <chance>0.7</chance>
+          </li>
+        </extraMeleeDamages>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

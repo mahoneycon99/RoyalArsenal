@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>RA_RanseurArmor</defName>
+	<label>ranseur armor</label>
+	<description>A highly specialized suit of light power-armor. Ranseur armor cannot protect as well as standard Recon armor, but it is highly optimized for stealth and reconissance operations. It features an advanced cloaking device in its core that can render its wearer invisible for extended periods of time.
+\nRanseur armor requires excessive power when its cloaking device is active, and its reactor must be resupplied with uranium after sufficient use.</description>
+	<techLevel>Spacer</techLevel>
+    <statBases>
+      <ArmorRating_Sharp>0.84</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <SmokepopBeltRadius>4.9</SmokepopBeltRadius>
+	  <WorkToMake>80000</WorkToMake>
+      <MaxHitPoints>280</MaxHitPoints>
+      <Mass>9</Mass>
+      <Flammability>0.4</Flammability>
+      <Insulation_Cold>32</Insulation_Cold>
+      <Insulation_Heat>9</Insulation_Heat>
+      <EquipDelay>11</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>1</MoveSpeed>
+	  <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+	<recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisites>
+        <li>RA_CloakingResearch</li>
+        <li>ReconArmor</li>
+      </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Items/Equipment/Apparel/RanseurArmor/RanseurArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>2</generateCommonality>
+    <tradeTags>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+      <ComponentSpacer>6</ComponentSpacer>
+      <Plasteel>80</Plasteel>
+      <Uranium>60</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Items/Equipment/Apparel/RanseurArmor/RanseurArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+	  <li Class="CompProperties_Reloadable">
+        <maxCharges>3</maxCharges>
+        <ammoDef>Uranium</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>cloak</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>RoyalArsenal.Verb_Cloak</verbClass>
+        <label>activate cloak</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ArmorHelmetMakeableBase">
+	<defName>RA_RanseurArmorHelmet</defName>
+    <label>ranseur helmet</label>
+    <description>A high-tech armored helmet designed for use with a set of Ranseur armor. It features an internal heads-up display with a targeting computer similar to those found in Gunlinks.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisites>
+        <li>RA_CloakingResearch</li>
+        <li>ReconArmor</li>
+      </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Items/Equipment/Apparel/RanseurArmorHelmet/RanseurArmorHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <tradeTags>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <generateCommonality>2</generateCommonality>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>1</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>0.84</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>30</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Items/Equipment/Apparel/RanseurArmorHelmet/RanseurArmorHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+	<equippedStatOffsets>
+      <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>RA_GuardianArmorBase</defName>
+    <label>guardian armor</label>
+    <description>A suit of specialty power armor designed with extra defensive measures. A personal countermeasure system is mounted on the back, capable of distributing radio-reflective chaff over a small area. Chaff prevents turrets from locking onto targets, but humanoid pawns can aim through it with no penalties.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisites>
+        <li>RA_RadioChaffResearch</li>
+        <li>PoweredArmor</li>
+	  </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Items/Equipment/Apparel/GuardianArmor/GuardianArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <generateCommonality>2</generateCommonality>
+    <statBases>
+      <WorkToMake>70000</WorkToMake>
+      <MaxHitPoints>340</MaxHitPoints>
+      <Mass>12</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.16</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.64</ArmorRating_Heat>
+      <Insulation_Cold>34</Insulation_Cold>
+      <Insulation_Heat>10</Insulation_Heat>
+      <EquipDelay>14</EquipDelay>
+	  <SmokepopBeltRadius>4.9</SmokepopBeltRadius>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.6</MoveSpeed>
+      <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <costList>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Plasteel>130</Plasteel>
+      <Uranium>20</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Items/Equipment/Apparel/GuardianArmor/GuardianArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+	<comps>
+	  <li Class="CompProperties_Biocodable"/>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>3</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>chaff</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>RoyalArsenal.Verb_Chaff</verbClass>
+        <label>release chaff</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+      </li>
+    </verbs>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>RA_ChaffBelt</defName>
+    <label>personal countermeasure system</label>
+    <description>A defensive countermeasure system worn on the belt. .</description>
+    <techLevel>Industrial</techLevel>
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>2</maxCharges>
+        <ammoDef>Steel</ammoDef>
+        <ammoCountPerCharge>20</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>chaff</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>RoyalArsenal.Verb_Chaff</verbClass>
+        <label>release chaff</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+      </li>
+    </verbs>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>RA_RadioChaffResearch</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <useIngredientsForColor>false</useIngredientsForColor>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>60</Steel>
+    </costList>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/SmokepopBelt/SmokepopBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <WorkToMake>1600</WorkToMake>
+      <Mass>3</Mass>
+      <Flammability>0.4</Flammability>
+      <SmokepopBeltRadius>4.9</SmokepopBeltRadius>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+    <generateAllowChance>0.15</generateAllowChance>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.6,0.4,0.4,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.6,0.6,0.4,1)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3,1)</min>
+          <max>(0.5,0.5,0.5,1)</max>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>RA_PhalanxArmor</defName>
+    <label>phalanx armor</label>
+    <description>A suit of heavy powered armor based on the standard Cataphract design. It features defensive improvements, including stronger armor plating and a reusable low-shield deployer.
+\nMechanites within the low-shield deployer can replicate the shield core in-between uses, but the unit must be resupplied with advanced components.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisites>
+        <li>CataphractArmor</li>
+        <li>ShieldBelt</li>
+      </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Things/Items/Equipment/Apparel/PhalanxArmor/PhalanxArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.25</uiIconScale>
+    <generateCommonality>2</generateCommonality>
+    <statBases>
+      <WorkToMake>90000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Mass>15</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.7</ArmorRating_Heat>
+      <Insulation_Cold>36</Insulation_Cold>
+      <Insulation_Heat>12</Insulation_Heat>
+      <EquipDelay>17</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-1.0</MoveSpeed>
+    </equippedStatOffsets>
+    <tradeTags>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+      <ComponentSpacer>10</ComponentSpacer>
+	  <BroadshieldCore>1</BroadshieldCore>
+      <Plasteel>180</Plasteel>
+      <Uranium>50</Uranium>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Items/Equipment/Apparel/PhalanxArmor/PhalanxArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>(0.9,0.9,0.9)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.33,0.33,0.33)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>(0.65,0.65,0.65)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>(0.3,0.3,0.3)</min>
+          <max>(0.5,0.5,0.5)</max>
+        </li>
+      </options>
+    </colorGenerator>
+    <comps>
+      <li Class="CompProperties_Biocodable"/>
+	  <li Class="CompProperties_Reloadable">
+        <maxCharges>1</maxCharges>
+		<ammoDef>ComponentSpacer</ammoDef>
+        <ammoCountPerCharge>4</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>shield</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>
+	<verbs>
+      <li>
+        <verbClass>Verb_DeployBroadshield</verbClass>
+        <label>deploy phalanx shield</label>
+        <violent>false</violent>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>false</targetable>
+        <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+        <onlyManualCast>True</onlyManualCast>
+      </li>
+    </verbs>
+    <thingSetMakerTags>
+      <li>RewardStandardHighFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+</Defs>
